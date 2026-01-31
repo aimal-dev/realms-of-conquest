@@ -75,7 +75,7 @@ const HeroSection: React.FC = () => {
               <input 
                 type="email" 
                 placeholder="Pre-Registration with Email Address" 
-                style={{ flex: 1, background: 'transparent', border: 'none', outline: 'none', color: 'white', padding: '0 40px', fontSize: '16px', fontStyle: 'italic', fontFamily: 'Inter' }}
+                style={{ width: '100%',flex: 1, background: 'transparent', border: 'none', outline: 'none', color: 'white', padding: '0 40px', fontSize: '16px', fontStyle: 'italic', fontFamily: 'Inter' }}
               />
               <div 
                 className="clip-slanted-right" 
@@ -106,19 +106,29 @@ const HeroSection: React.FC = () => {
             <ButtonMagic />
 
             {/* Google Play Button */}
-            <div className="clip-hexagon-full" style={{ padding: '1px', background: 'rgba(255,255,255,0.2)' }}>
-              <div className="clip-hexagon-full" style={{ display: 'flex', alignItems: 'center', background: 'black', padding: '12px 32px', cursor: 'pointer', minWidth: '260px', height: '66px', justifyContent: 'center' }}>
-                <Image src="/assets/playstore.png" alt="Play Store" width={140} height={40} className='object-contain' />
+            <div style={{ position: 'relative' }}>
+              <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '300px', height: '100px', zIndex: -1 }}>
+                <Image src="/assets/button-bg-wave-dark.png" alt="Dark Wave" fill className="object-contain" style={{ opacity: 0.8 }} />
+              </div>
+              <div className="clip-hexagon-full" style={{ padding: '1px', background: 'rgba(255,255,255,0.2)' }}>
+                <div className="clip-hexagon-full" style={{ display: 'flex', alignItems: 'center', background: 'black', padding: '12px 32px', cursor: 'pointer', minWidth: '260px', height: '66px', justifyContent: 'center' }}>
+                  <Image src="/assets/playstore.png" alt="Play Store" width={140} height={40} className='object-contain' />
+                </div>
               </div>
             </div>
 
             {/* Rewards Button */}
-            <div className="clip-hexagon-full" style={{ padding: '1px', background: 'rgba(165,145,93,0.4)' }}>
-              <div className="clip-hexagon-full" style={{ display: 'flex', alignItems: 'center', gap: '16px', background: 'linear-gradient(135deg, #FFFFC3 0%, #DCC892 50%, #A5915D 100%)', padding: '12px 32px', cursor: 'pointer', minWidth: '260px', height: '66px', justifyContent: 'center' }}>
-                <Image src="/assets/reward-btn-icon.png" alt="Reward" width={32} height={32} />
-                <div style={{ textAlign: 'left' }}>
-                  <div className="title-font" style={{ fontSize: '10px', color: 'rgba(0,0,0,0.6)', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 'bold', whiteSpace: 'nowrap' }}>Pre-Registration</div>
-                  <div className="title-font" style={{ fontSize: '18px', fontWeight: 'bold', color: 'black', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>Rewards</div>
+            <div style={{ position: 'relative' }}>
+              <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '300px', height: '100px', zIndex: -1 }}>
+                <Image src="/assets/button-bg-wave.png" alt="Gold Wave" fill className="object-contain" style={{ opacity: 0.8 }} />
+              </div>
+              <div className="clip-hexagon-full" style={{ padding: '1px', background: 'rgba(165,145,93,0.4)' }}>
+                <div className="clip-hexagon-full" style={{ display: 'flex', alignItems: 'center', gap: '16px', background: 'linear-gradient(135deg, #FFFFC3 0%, #DCC892 50%, #A5915D 100%)', padding: '12px 32px', cursor: 'pointer', minWidth: '260px', height: '66px', justifyContent: 'center' }}>
+                  <Image src="/assets/reward-btn-icon.png" alt="Reward" width={32} height={32} />
+                  <div style={{ textAlign: 'left' }}>
+                    <div className="title-font" style={{ fontSize: '10px', color: 'rgba(0,0,0,0.6)', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: 'bold', whiteSpace: 'nowrap' }}>Pre-Registration</div>
+                    <div className="title-font" style={{ fontSize: '18px', fontWeight: 'bold', color: 'black', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>Rewards</div>
+                  </div>
                 </div>
               </div>
             </div>
